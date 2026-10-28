@@ -17,50 +17,50 @@ const OPEN_IN_NEW_TAB = true;
 
 const PRACTICALS = [
   {
-    title: "Practical 1 title",
-    description: "One line about what this website does.",
+    title: "Ilai Thali — Restaurant Landing Page",
+    description: "A South Indian restaurant landing page with menu, about section, and reservation form.",
     url: "practicals/landing/index.html",
     type: "web",
-    tech: ["HTML", "CSS", "JS"]
+    tech: ["HTML", "CSS"]
   },
   {
-    title: "Practical 2 title",
-    description: "One line about what this website does.",
+    title: "Pastel Palette — Fashion E-Commerce",
+    description: "A luxury fashion storefront with product grid, cart drawer, and heritage tailoring showcase.",
     url: "practicals/Practical 2/index.html",
     type: "web",
     tech: ["HTML", "CSS", "JS"]
   },
   {
-    title: "Practical 3 title",
-    description: "One line about what this website does.",
+    title: "Developer Portfolio",
+    description: "A personal portfolio featuring projects, skills, experience timeline, and contact form.",
     url: "practicals/practical 3/index.html",
     type: "web",
     tech: ["HTML", "CSS", "JS"]
   },
   {
-    title: "Practical 4 title",
-    description: "One line about what this website does.",
+    title: "Aether Auth — Login & Signup UI",
+    description: "A premium authentication interface with sign-in/sign-up forms, social logins, and 3D visuals.",
     url: "practicals/practical 4/index.html",
     type: "web",
     tech: ["HTML", "CSS", "JS"]
   },
   {
-    title: "Practical 5 title",
-    description: "One line about what this website does.",
+    title: "The Daily Chronicle — News Portal",
+    description: "A full-stack news portal with breaking ticker, article pages, search, and user authentication.",
     url: "practicals/Practical 5/index.html",
     type: "web",
-    tech: ["HTML", "CSS", "JS"]
+    tech: ["HTML", "CSS", "PHP"]
   },
   {
-    title: "Practical 6 title",
-    description: "One line about what this React app does.",
+    title: "College Portal — Student Profiles",
+    description: "A React-based student profile directory with search, filtering, and detailed profile cards.",
     url: "https://agent-6ae208a40b6a947e2--tourmaline-bunny-46b530.netlify.app/",
     type: "react",
     tech: ["React", "JS", "CSS"]
   },
   {
-    title: "Practical 7 title",
-    description: "One line about what this React app does.",
+    title: "Grove — Employee Directory",
+    description: "A React employee directory app with state management, search, and dynamic employee listings.",
     url: "https://papaya-pika-41ec72.netlify.app",
     type: "react",
     tech: ["React", "JS", "CSS"]
