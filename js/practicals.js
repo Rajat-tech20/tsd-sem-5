@@ -26,7 +26,7 @@ const PRACTICALS = [
   {
     title: "Practical 2 title",
     description: "One line about what this website does.",
-    url: "practicals/practical 2/index.html",
+    url: "practicals/Practical 2/index.html",
     type: "web",
     tech: ["HTML", "CSS", "JS"]
   },
@@ -47,7 +47,7 @@ const PRACTICALS = [
   {
     title: "Practical 5 title",
     description: "One line about what this website does.",
-    url: "practicals/practical 5/index.html",
+    url: "practicals/Practical 5/index.html",
     type: "web",
     tech: ["HTML", "CSS", "JS"]
   },
