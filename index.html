@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Skill Development | Practicals</title>
+  <meta name="description" content="TSD practical portfolio: HTML, CSS, JavaScript and React projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="grid" aria-hidden="true"></div>
+    <div class="glow" id="glow" aria-hidden="true"></div>
+
+    <p class="tag">Subject code: TSD</p>
+    <h1 aria-label="Technical Skill Development">
+      <span class="row" data-text="TECHNICAL"></span>
+      <span class="row" data-text="SKILL"></span>
+      <span class="row" data-text="DEVELOPMENT"></span>
+    </h1>
+    <p class="sub">Seven practicals built with HTML, CSS, JavaScript and React. Pick one to open the live site.</p>
+
+    <a class="cta" href="#practicals">
+      View practicals
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </header>
+
+  <!-- ===== DASHBOARD ===== -->
+  <main class="dash" id="practicals">
+    <div class="wrap">
+
+      <div class="dash-head">
+        <div>
+          <h2>Practical dashboard</h2>
+          <p class="lead">Select a card to open that practical's website.</p>
+        </div>
+
+        <ul class="stats" aria-label="Summary">
+          <li><b data-count="7">0</b><span>Total</span></li>
+          <li><b data-count="5">0</b><span>HTML / CSS / JS</span></li>
+          <li><b data-count="2">0</b><span>React</span></li>
+        </ul>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter by technology">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="web" aria-pressed="false">HTML / CSS / JS</button>
+          <button type="button" data-filter="react" aria-pressed="false">React</button>
+        </div>
+
+        <div class="search">
+          <label for="search">Search practicals</label>
+          <input id="search" type="search" placeholder="Type a title or keyword" autocomplete="off">
+        </div>
+      </div>
+
+      <p class="result" id="result" role="status" aria-live="polite"></p>
+
+      <div class="cards" id="cards"></div>
+
+      <p class="empty" id="empty" hidden>No practicals match your search. Clear the search box or choose All.</p>
+    </div>
+  </main>
+
+  <!-- ===== ABOUT ME ===== -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-lines" aria-hidden="true"></div>
+
+      <div class="about-card" id="about-card">
+        <div class="about-avatar">
+          <div class="avatar-ring" aria-hidden="true"></div>
+          <div class="avatar-placeholder">
+            <svg viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="about-label">About Me</p>
+          <h2 class="about-name">Your Name</h2>
+          <p class="about-bio">
+            A passionate developer exploring the intersections of design and technology.
+            This portfolio showcases seven practicals built during the Technical Skill Development course,
+            spanning HTML, CSS, JavaScript, and React.
+          </p>
+
+          <div class="about-skills">
+            <span class="skill-chip" style="--d:0">HTML</span>
+            <span class="skill-chip" style="--d:1">CSS</span>
+            <span class="skill-chip" style="--d:2">JavaScript</span>
+            <span class="skill-chip" style="--d:3">React</span>
+            <span class="skill-chip" style="--d:4">Git</span>
+            <span class="skill-chip" style="--d:5">Responsive Design</span>
+            <span class="skill-chip" style="--d:6">UI / UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THANK YOU ===== -->
+  <footer class="thankyou" id="thankyou">
+    <div class="ty-particles" aria-hidden="true" id="ty-particles"></div>
+    <div class="ty-content" id="ty-content">
+      <p class="ty-pre">That's a wrap!</p>
+      <h2 class="ty-heading">
+        <span class="ty-word">Thank</span>
+        <span class="ty-word ty-accent">You</span>
+      </h2>
+      <p class="ty-sub">For taking the time to explore my practicals. Every line of code is a step forward.</p>
+      <div class="ty-wave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="ty-copy">Technical Skill Development &middot; Practical portfolio</p>
+    </div>
+  </footer>
+
+  <!-- Your list of practicals lives in js/practicals.js -->
+  <script src="js/practicals.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

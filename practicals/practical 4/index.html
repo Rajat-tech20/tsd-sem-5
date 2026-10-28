@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Auth | Next-Gen Experience</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Spline 3D Viewer Script (loads asynchronously for performance) -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
+</head>
+<body>
+    <!-- Premium Ambient Background Blobs -->
+    <div class="bg-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Main Authentication Container -->
+    <div class="auth-container" id="auth-container">
+        
+        <!-- SIGN IN FORM SIDE -->
+        <div class="form-container sign-in-container">
+            <form id="sign-in-form" onsubmit="handleAuthSubmit(event, 'signin')">
+                <h1 class="form-title">Welcome Back</h1>
+                <p class="form-subtitle">Enter your credentials to access your secure portal.</p>
+                
+                <!-- Social Logins -->
+                <div class="social-container">
+                    <button type="button" class="social-btn" id="btn-google-in" aria-label="Sign in with Google">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn" id="btn-apple-in" aria-label="Sign in with Apple">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                    <button type="button" class="social-btn" id="btn-github-in" aria-label="Sign in with GitHub">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                
+                <span class="divider-text">or use your email account</span>
+                
+                <!-- Inputs -->
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="signin-email" required placeholder=" " autocomplete="email">
+                    <label for="signin-email" class="floating-label">Email Address</label>
+                    <span class="focus-line"></span>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fa-regular fa-lock input-icon"></i>
+                    <input type="password" id="signin-password" required placeholder=" " autocomplete="current-password">
+                    <label for="signin-password" class="floating-label">Password</label>
+                    <span class="focus-line"></span>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signin-password', this)" aria-label="Toggle password visibility">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+                
+                <a href="#" class="forgot-link" id="link-forgot">Forgot your password?</a>
+                
+                <button type="submit" class="submit-btn" id="btn-submit-signin">
+                    <span>Sign In</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- SIGN UP FORM SIDE -->
+        <div class="form-container sign-up-container">
+            <form id="sign-up-form" onsubmit="handleAuthSubmit(event, 'signup')">
+                <h1 class="form-title">Create Account</h1>
+                <p class="form-subtitle">Join us to explore the future of secure technology.</p>
+                
+                <!-- Social Logins -->
+                <div class="social-container">
+                    <button type="button" class="social-btn" id="btn-google-up" aria-label="Sign up with Google">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn" id="btn-apple-up" aria-label="Sign up with Apple">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                    <button type="button" class="social-btn" id="btn-github-up" aria-label="Sign up with GitHub">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                
+                <span class="divider-text">or register with your email</span>
+                
+                <!-- Inputs -->
+                <div class="input-group">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="signup-name" required placeholder=" " autocomplete="name">
+                    <label for="signup-name" class="floating-label">Full Name</label>
+                    <span class="focus-line"></span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="signup-email" required placeholder=" " autocomplete="email">
+                    <label for="signup-email" class="floating-label">Email Address</label>
+                    <span class="focus-line"></span>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fa-regular fa-lock input-icon"></i>
+                    <input type="password" id="signup-password" required placeholder=" " autocomplete="new-password">
+                    <label for="signup-password" class="floating-label">Password</label>
+                    <span class="focus-line"></span>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-regular fa-circle-check input-icon"></i>
+                    <input type="password" id="signup-confirm-password" required placeholder=" " autocomplete="new-password">
+                    <label for="signup-confirm-password" class="floating-label">Confirm Password</label>
+                    <span class="focus-line"></span>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-confirm-password', this)" aria-label="Toggle password visibility">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="btn-submit-signup">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- SLIDING OVERLAY CONTAINER -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <!-- Spline 3D Scene Viewport -->
+                <div class="spline-container">
+                    <!-- Iridescent fluid blob from public Spline design library -->
+                    <spline-viewer url="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode" loading-lib="async" events-target="global"></spline-viewer>
+                </div>
+
+                <!-- Overlay panel for toggling to Sign Up -->
+                <div class="overlay-panel overlay-left">
+                    <div class="overlay-content">
+                        <h2 class="overlay-title">Hello, Explorer!</h2>
+                        <p class="overlay-desc">Enter your personal details and start your journey with us.</p>
+                        <button class="ghost-btn" id="signIn" onclick="toggleFormState(false)">
+                            <span>Sign In</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Overlay panel for toggling to Sign In -->
+                <div class="overlay-panel overlay-right">
+                    <div class="overlay-content">
+                        <h2 class="overlay-title">Welcome Back!</h2>
+                        <p class="overlay-desc">To keep connected with us, please login with your personal info.</p>
+                        <button class="ghost-btn" id="signUp" onclick="toggleFormState(true)">
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lottie Animation Success Overlay -->
+        <div class="lottie-overlay" id="success-overlay" style="display: none;">
+            <div class="lottie-card">
+                <div class="lottie-animation-container" id="lottie-box"></div>
+                <h2 class="success-title" id="success-title">Verification Successful</h2>
+                <p class="success-desc" id="success-desc">Redirecting to your dashboard...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Anime.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Local logic script -->
+    <script src="script.js"></script>
+</body>
+</html>

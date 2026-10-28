@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajat — Backend & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Rajat — backend & full-stack developer building APIs, mobile apps, and AI-powered tools." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP (GreenSock Animation Platform) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- ======================== NAVIGATION ======================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo"><span>Rajat</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ======================== HERO SECTION ======================== -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="hero-kicker">Backend &amp; Full-Stack Developer</div>
+        <h1>Building systems that <em>hold up</em> under real traffic.</h1>
+        <p class="hero-desc">
+          I'm Rajat — a final-stretch IT student who builds REST APIs, mobile apps,
+          and AI-powered tools end to end. I care about the parts users never see:
+          auth that doesn't leak, schemas that don't rot, and services that stay up.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact me</a>
+        </div>
+      </div>
+
+      <!-- Terminal-style JSON card (animated with GSAP) -->
+      <div class="term-card">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">GET /api/v1/profile</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line">{</div>
+          <div class="term-line">  <span class="key">"name"</span>: <span class="str">"Rajat"</span>,</div>
+          <div class="term-line">  <span class="key">"role"</span>: <span class="str">"Backend &amp; Full-Stack Developer"</span>,</div>
+          <div class="term-line">  <span class="key">"based_in"</span>: <span class="str">"Nagpur, India"</span>,</div>
+          <div class="term-line">  <span class="key">"stack"</span>: [<span class="str">"FastAPI"</span>, <span class="str">"Node.js"</span>, <span class="str">"React"</span>, <span class="str">"Flutter"</span>],</div>
+          <div class="term-line">  <span class="key">"currently"</span>: <span class="str">"B.Tech IT, final stretch"</span>,</div>
+          <div class="term-line">  <span class="key">"open_to_work"</span>: <span class="bool">true</span>,</div>
+          <div class="term-line">  <span class="key">"status"</span>: <span class="num">200</span> <span class="comment">// OK</span></div>
+          <div class="term-line">}<span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT SECTION ======================== -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">Backend-first, full-stack in practice.</h2>
+      </div>
+      <div class="about-text">
+        <p>
+          I'm a third-year Information Technology student at St. Vincent Pallotti
+          College of Engineering &amp; Technology, RTMNU Nagpur, graduating in
+          2027–2028. Most of my work sits on the backend — REST APIs, auth systems,
+          and database design — but I ship the frontend and mobile layers too,
+          across React and Flutter.
+        </p>
+        <p>
+          Lately I've been building AI-powered tools: retrieval-augmented systems,
+          phishing and scam detectors, and integrations with the Claude and Gemini
+          APIs. I like building the underlying logic by hand before reaching for a
+          framework, so I actually understand what the framework is doing for me.
+        </p>
+        <div class="stat-list">
+          <div class="stat">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Internships — Flutter &amp; backend development</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Shipped projects, from hackathons to client work</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2027</div>
+            <div class="stat-label">Expected graduation, B.Tech IT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== EXPERIENCE SECTION ======================== -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="eyebrow">Experience</div>
+      <h2 class="section-title">Where I've worked.</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-role">Flutter &amp; Backend Developer</div>
+          <div class="tl-org">Linkific</div>
+          <div class="tl-meta">Internship</div>
+          <p class="tl-desc">
+            Built Orbit, a scalable company management backend: RBAC with
+            SuperAdmin/Admin tiers, JWT auth with token blacklisting, REST APIs
+            for tasks, meetings, projects and departments, plus graph-theory-based
+            analytics.
+          </p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Python / Backend Developer</div>
+          <div class="tl-org">SSIT Pvt. Ltd.</div>
+          <div class="tl-meta">Internship</div>
+          <p class="tl-desc">
+            Worked on backend development in Python, contributing to internal
+            tooling and services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS SECTION ======================== -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="eyebrow">Selected work</div>
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-index">01</div>
+          <h3>Orbit</h3>
+          <p>Scalable company management backend built during my Linkific internship, with role-based access control and graph-based analytics.</p>
+          <div class="tag-row">
+            <span class="tag">REST API</span>
+            <span class="tag">JWT Auth</span>
+            <span class="tag">RBAC</span>
+            <span class="tag">Graph Analytics</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-index">02</div>
+          <h3>Scam Shield</h3>
+          <p>Regional-language scam &amp; phishing detector for UPI, SMS and WhatsApp scams — built for the "Build with Gemma 4" hackathon under team ByteGuard.</p>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Gemma API</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-index">03</div>
+          <h3>Resume Builder SaaS</h3>
+          <p>A resume-builder platform I'm building out phase by phase, following a thin-router / fat-service architecture with UUID primary keys and refresh token blacklisting.</p>
+          <div class="tag-row">
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Alembic</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-index">04</div>
+          <h3>URL Shortener with Analytics</h3>
+          <p>A fully debugged link-shortening service with click analytics, rate limiting, and API docs — built on Express with Redis-backed caching.</p>
+          <div class="tag-row">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Swagger</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-index">05</div>
+          <h3>PhishGuard</h3>
+          <p>A Flutter-based mobile app that uses machine learning to detect phishing attempts in real time.</p>
+          <div class="tag-row">
+            <span class="tag">Flutter</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-index">06</div>
+          <h3>LexiRead</h3>
+          <p>A reading platform that surfaces word definitions on hover, built to make dense text easier to read without breaking flow.</p>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SKILLS SECTION ======================== -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="eyebrow">Toolbox</div>
+      <h2 class="section-title">Skills &amp; stack</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Backend</h4>
+          <div class="pill-row">
+            <span class="pill">FastAPI</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">Express</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Redis</span>
+            <span class="pill">JWT Auth</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Frontend &amp; Mobile</h4>
+          <div class="pill-row">
+            <span class="pill">React</span>
+            <span class="pill">Flutter</span>
+            <span class="pill">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>AI / ML</h4>
+          <div class="pill-row">
+            <span class="pill">RAG Systems</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">Sentence-Transformers</span>
+            <span class="pill">Claude API</span>
+            <span class="pill">Gemini API</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Foundations</h4>
+          <div class="pill-row">
+            <span class="pill">C++ / OOP</span>
+            <span class="pill">Operating Systems</span>
+            <span class="pill">Data Structures</span>
+            <span class="pill">System Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT SECTION ======================== -->
+  <section class="section" id="contact" style="border-bottom: none;">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title">Let's build something.</h2>
+        <p class="contact-desc">
+          Open to backend, full-stack and freelance roles. The fastest way to
+          reach me is email — I'll usually reply within a day.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your-email@example.com">Email <span class="mono email-hint">your-email@example.com</span></a>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Blog — DevWithRajat</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-msg').style.opacity=1;">
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" placeholder="you@company.com" required />
+        </div>
+        <div class="field">
+          <label for="f-msg">Message</label>
+          <textarea id="f-msg" placeholder="What are you working on?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p id="form-msg" class="form-feedback">
+          This is a static demo — wire this form up to your backend or a form service to receive messages.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="wrap">
+  <span>&copy; 2025 Rajat. Built with plain HTML &amp; CSS.</span>
+  <span>Nagpur, India</span>
+</footer>
+
+<!-- ======================== GSAP ANIMATION ======================== -->
+<script>
+  // GSAP Timeline for the terminal card animation
+  // A timeline lets us sequence multiple animations one after another
+
+  const tl = gsap.timeline({ delay: 0.5 });
+
+  // 1. Animate the terminal card sliding in from the right and fading in
+  tl.from(".term-card", {
+    duration: 0.8,
+    opacity: 0,
+    x: 60,
+    ease: "power2.out"
+  });
+
+  // 2. Animate each JSON line appearing one by one (stagger effect)
+  //    stagger: 0.15 means each line appears 0.15s after the previous one
+  tl.from(".term-line", {
+    duration: 0.4,
+    opacity: 0,
+    x: -20,
+    stagger: 0.15,
+    ease: "power2.out"
+  }, "-=0.3");  // "-=0.3" starts this 0.3s before the previous animation ends (overlap)
+
+  // 3. Animate the blinking cursor appearing at the end
+  tl.from(".cursor", {
+    duration: 0.3,
+    opacity: 0,
+    scale: 0,
+    ease: "back.out(2)"
+  });
+</script>
+
+</body>
+</html>
+

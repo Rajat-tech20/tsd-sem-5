@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASTEL PALETTE — Quiet Luxury & Heritage Tailoring</title>
+
+    <!-- Google Fonts: Bodoni Moda (Display / Fashion House Serif) + Jost (Refined Body Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Minimalist Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         1. ANNOUNCEMENT BAR (Flexbox)
+         =================================================== -->
+    <div class="top-announcement" role="region" aria-label="Announcement">
+        <p>COMPLIMENTARY EXPRESS SHIPPING ON ORDERS OVER $350 &nbsp;•&nbsp; <span>THE SPRING EDIT</span></p>
+    </div>
+
+    <!-- ===================================================
+         2. HEADER / STICKY NAVBAR (Flexbox + Position: Sticky)
+         =================================================== -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            
+            <!-- Mobile Drawer Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Brand Logo (Bodoni Moda Wordmark) -->
+            <a href="#" class="brand-logo" aria-label="Pastel Palette Home">
+                <span class="logo-wordmark">PASTEL PALETTE</span>
+                <span class="logo-tagline">HERITAGE TAILORING</span>
+            </a>
+
+            <!-- Primary Navigation Links -->
+            <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#" class="nav-item active">New Arrivals</a></li>
+                    <li><a href="#catalogue" class="nav-item">Catalogue</a></li>
+                    <li><a href="#about" class="nav-item">Craftsmanship</a></li>
+                    <li><a href="#footer" class="nav-item">Concierge</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Icons -->
+            <div class="nav-actions">
+                <button class="action-btn" aria-label="Search Collection">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="action-btn" id="wishlistNavBtn" aria-label="Wishlist (0 Saved)">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistCount">0</span>
+                </button>
+                <button class="action-btn" id="cartNavBtn" aria-label="Shopping Bag (0 Items)">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================
+         3. HERO BANNER (CSS Grid & Relative Positioning)
+         =================================================== -->
+    <section class="hero-section" aria-label="Spring Editorial Collection">
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Editorial portrait of model in quiet luxury pastel tailoring" 
+                 class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">SPRING / SUMMER 2026</span>
+            <h1 class="hero-title">The Pastel Collection</h1>
+            <p class="hero-desc">
+                Heritage tailoring and Mongolian cashmere reinterpreted in soft sage, dusty blush, and powder blue.
+            </p>
+            <a href="#catalogue" class="hero-cta-btn">Explore The Catalogue</a>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         4. MAIN CATALOGUE SECTION
+         =================================================== -->
+    <main class="catalogue-container" id="catalogue">
+
+        <!-- Section Header -->
+        <header class="section-header">
+            <span class="sub-title">CURATED SELECTION</span>
+            <h2 class="main-title">Editorial Product Catalogue</h2>
+            <div class="gold-divider" role="separator"></div>
+            <p class="section-intro">Restrained silhouettes, uncompromised materials, soft palette hues.</p>
+        </header>
+
+        <!-- Filter & Sort Bar (Flexbox) -->
+        <div class="control-bar">
+            
+            <!-- Category Chips Filter -->
+            <div class="category-chips" id="categoryChips" role="tablist" aria-label="Filter products by category">
+                <button class="chip-btn active" data-category="all" role="tab" aria-selected="true">All Items</button>
+                <button class="chip-btn" data-category="knitwear" role="tab" aria-selected="false">Knitwear</button>
+                <button class="chip-btn" data-category="outerwear" role="tab" aria-selected="false">Outerwear</button>
+                <button class="chip-btn" data-category="trousers" role="tab" aria-selected="false">Trousers</button>
+                <button class="chip-btn" data-category="tailoring" role="tab" aria-selected="false">Tailoring</button>
+                <button class="chip-btn" data-category="accessories" role="tab" aria-selected="false">Accessories</button>
+            </div>
+
+            <!-- Sort Controls -->
+            <div class="sort-controls">
+                <label for="sortSelect" class="sort-label">Sort:</label>
+                <select id="sortSelect" class="sort-dropdown" aria-label="Sort products">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+                <button class="filter-toggle-mobile" id="filterToggleMobile">
+                    <i class="fa-solid fa-sliders"></i> Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- ===================================================
+             PRODUCT GRID (CSS Grid System)
+             =================================================== -->
+        <div class="product-grid" id="productGrid">
+
+            <!-- Product Card 1 -->
+            <article class="product-card" data-category="knitwear" data-price="420" data-name="Sage Cashmere Cardigan">
+                <div class="card-media">
+                    <span class="badge badge-sage">Sage Collection</span>
+                    <button class="wishlist-toggle" aria-label="Save Sage Cashmere Cardigan to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80" 
+                         alt="Sage green 4-ply cashmere cardigan in soft flat-lay portrait" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Sage Cashmere Cardigan', '$420', 'knitwear', 'Crafted from 100% 4-ply Mongolian cashmere in soft sage green.', 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Knitwear</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-sage active" title="Sage Green"></span>
+                            <span class="swatch swatch-cream" title="Cream Ivory"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Sage Cashmere Cardigan</h3>
+                    <p class="card-material">100% Grade-A Mongolian Cashmere</p>
+                    <div class="card-footer">
+                        <span class="card-price">$420</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Sage Cashmere Cardigan', 420)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 2 -->
+            <article class="product-card" data-category="outerwear" data-price="780" data-name="Dusty Blush Trench Coat">
+                <div class="card-media">
+                    <span class="badge badge-blush">New Arrival</span>
+                    <button class="wishlist-toggle" aria-label="Save Dusty Blush Trench Coat to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80" 
+                         alt="Dusty blush double-breasted cotton trench coat" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Dusty Blush Trench Coat', '$780', 'outerwear', 'Double-breasted Italian cotton gabardine trench coat in soft dusty blush.', 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Outerwear</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-blush active" title="Dusty Blush"></span>
+                            <span class="swatch swatch-powder" title="Powder Blue"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Dusty Blush Trench Coat</h3>
+                    <p class="card-material">Italian Cotton Gabardine</p>
+                    <div class="card-footer">
+                        <span class="card-price">$780</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Dusty Blush Trench Coat', 780)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 3 -->
+            <article class="product-card" data-category="trousers" data-price="340" data-name="Powder Blue Pleated Trousers">
+                <div class="card-media">
+                    <button class="wishlist-toggle" aria-label="Save Powder Blue Pleated Trousers to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" 
+                         alt="High-waisted powder blue merino wool pleated trousers" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Powder Blue Pleated Trousers', '$340', 'trousers', 'High-waisted pleated trousers in Super 120s powder blue merino wool.', 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Trousers</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-powder active" title="Powder Blue"></span>
+                            <span class="swatch swatch-cream" title="Cream"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Powder Blue Pleated Trousers</h3>
+                    <p class="card-material">Super 120s Merino Wool</p>
+                    <div class="card-footer">
+                        <span class="card-price">$340</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Powder Blue Pleated Trousers', 340)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 4 -->
+            <article class="product-card" data-category="tailoring" data-price="650" data-name="Sage Linen Double-Breasted Blazer">
+                <div class="card-media">
+                    <span class="badge badge-gold">Bestseller</span>
+                    <button class="wishlist-toggle" aria-label="Save Sage Linen Blazer to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
+                         alt="Sage green Neapolitan tailored double-breasted linen blazer" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Sage Linen Double-Breasted Blazer', '$650', 'tailoring', 'Neapolitan tailored double-breasted blazer in pure Irish linen.', 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Tailoring</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-sage active" title="Sage Green"></span>
+                            <span class="swatch swatch-powder" title="Powder Blue"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Sage Linen Double-Breasted Blazer</h3>
+                    <p class="card-material">100% Irish Linen • Neapolitan Cut</p>
+                    <div class="card-footer">
+                        <span class="card-price">$650</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Sage Linen Double-Breasted Blazer', 650)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 5 -->
+            <article class="product-card" data-category="knitwear" data-price="380" data-name="Blush Cable-Knit Crewneck">
+                <div class="card-media">
+                    <button class="wishlist-toggle" aria-label="Save Blush Cable-Knit Crewneck to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80" 
+                         alt="Dusty blush heavy cable-knit merino wool crewneck sweater" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Blush Cable-Knit Crewneck', '$380', 'knitwear', 'Heavyweight merino wool cable-knit crewneck sweater in dusty blush pink.', 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Knitwear</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-blush active" title="Dusty Blush"></span>
+                            <span class="swatch swatch-cream" title="Cream Ivory"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Blush Cable-Knit Crewneck</h3>
+                    <p class="card-material">Heavyweight Merino Wool</p>
+                    <div class="card-footer">
+                        <span class="card-price">$380</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Blush Cable-Knit Crewneck', 380)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 6 -->
+            <article class="product-card" data-category="tailoring" data-price="290" data-name="Ivory Silk Tailored Shirt">
+                <div class="card-media">
+                    <button class="wishlist-toggle" aria-label="Save Ivory Silk Tailored Shirt to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=80" 
+                         alt="Ivory silk tailored shirt with mother of pearl buttons" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Ivory Silk Tailored Shirt', '$290', 'tailoring', 'Pure Mulberry silk tailored blouse with genuine Australian mother-of-pearl buttons.', 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Tailoring</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-cream active" title="Ivory Cream"></span>
+                            <span class="swatch swatch-sage" title="Sage Green"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Ivory Silk Tailored Shirt</h3>
+                    <p class="card-material">100% Mulberry Silk</p>
+                    <div class="card-footer">
+                        <span class="card-price">$290</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Ivory Silk Tailored Shirt', 290)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 7 -->
+            <article class="product-card" data-category="outerwear" data-price="720" data-name="Powder Blue Tweed Jacket">
+                <div class="card-media">
+                    <span class="badge badge-gold">Limited Edition</span>
+                    <button class="wishlist-toggle" aria-label="Save Powder Blue Tweed Jacket to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" 
+                         alt="Handwoven Scottish tweed jacket in powder blue pastel weave" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Powder Blue Tweed Jacket', '$720', 'outerwear', 'Handwoven Scottish Harris Tweed jacket in powder blue with suede lining.', 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Outerwear</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-powder active" title="Powder Blue"></span>
+                            <span class="swatch swatch-sage" title="Sage Green"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Powder Blue Tweed Jacket</h3>
+                    <p class="card-material">Handwoven Scottish Harris Tweed</p>
+                    <div class="card-footer">
+                        <span class="card-price">$720</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Powder Blue Tweed Jacket', 720)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 8 -->
+            <article class="product-card" data-category="accessories" data-price="460" data-name="Cream Leather Penny Loafers">
+                <div class="card-media">
+                    <button class="wishlist-toggle" aria-label="Save Cream Leather Loafers to Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80" 
+                         alt="Cream burnished calfskin Goodyear welted penny loafers" 
+                         loading="lazy" 
+                         class="card-img">
+                    <div class="card-quick-actions">
+                        <button class="quick-view-trigger" onclick="openQuickModal('Cream Leather Penny Loafers', '$460', 'accessories', 'Goodyear welted full-grain cream calfskin penny loafers.', 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80')">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-category">Accessories</span>
+                        <div class="color-swatches">
+                            <span class="swatch swatch-cream active" title="Cream Calfskin"></span>
+                            <span class="swatch swatch-blush" title="Blush Accent"></span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">Cream Leather Penny Loafers</h3>
+                    <p class="card-material">Goodyear Welted Calfskin</p>
+                    <div class="card-footer">
+                        <span class="card-price">$460</span>
+                        <button class="add-cart-btn" onclick="handleAddToCart('Cream Leather Penny Loafers', 460)">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- ===================================================
+         5. CRAFTSMANSHIP BANNER (#about)
+         =================================================== -->
+    <section class="craft-banner" id="about" aria-label="About Our Heritage">
+        <div class="craft-container">
+            <div class="craft-text">
+                <span class="sub-title">HERITAGE MILLS</span>
+                <h2>Restrained Quiet Luxury</h2>
+                <p>
+                    Our garments originate from historical mills in Como, Biella, and the Scottish Highlands. 
+                    Crafted in small, numbered batches to preserve artisanal integrity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         6. QUICK VIEW MODAL (Fixed Position)
+         =================================================== -->
+    <div class="modal-backdrop" id="quickModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal window">&times;</button>
+            <div class="modal-layout">
+                <div class="modal-media">
+                    <img id="modalImg" src="" alt="Product detail preview">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCat">Category</span>
+                    <h2 class="modal-title" id="modalTitle">Product Title</h2>
+                    <p class="modal-price" id="modalPrice">$0</p>
+                    <p class="modal-desc" id="modalDesc">Garment specifications appear here.</p>
+                    <button class="modal-cta-btn" id="modalAddBag">
+                        <i class="fa-solid fa-bag-shopping"></i> Add to Shopping Bag
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast (Fixed Position) -->
+    <div class="toast-notification" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastText">Item updated</span>
+    </div>
+
+    <!-- ===================================================
+         7. FOOTER (CSS Grid System)
+         =================================================== -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">PASTEL PALETTE</h3>
+                <p class="footer-tagline">
+                    Heritage tailoring, cashmere knitwear, and soft luxury essentials.
+                </p>
+                <div class="newsletter-box">
+                    <p class="news-label">THE JOURNAL</p>
+                    <div class="news-form">
+                        <input type="email" placeholder="Enter your email..." aria-label="Email address for newsletter">
+                        <button type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#">Spring Knitwear</a></li>
+                    <li><a href="#">Scottish Tweed</a></li>
+                    <li><a href="#">Italian Linen</a></li>
+                    <li><a href="#">Bespoke Footwear</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Client Services</h4>
+                <ul>
+                    <li><a href="#">Private Fitting Appointments</a></li>
+                    <li><a href="#">Garment Care Guide</a></li>
+                    <li><a href="#">Express Delivery & Returns</a></li>
+                    <li><a href="#">Contact Concierge</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PASTEL PALETTE APPAREL INC. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

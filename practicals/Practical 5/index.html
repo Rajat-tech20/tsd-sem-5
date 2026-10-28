@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Chronicle — News Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Breaking News Ticker -->
+  <div class="ticker" aria-label="Breaking news">
+    <span class="ticker__label">Breaking</span>
+    <div class="ticker__track">
+      <p class="ticker__text">
+        Parliament passes landmark climate bill &nbsp;•&nbsp;
+        Tech giants report record quarterly earnings &nbsp;•&nbsp;
+        National team advances to World Cup semifinals &nbsp;•&nbsp;
+        New metro line opens in capital city
+      </p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#" class="logo">
+        <span class="logo__mark">DC</span>
+        <span class="logo__text">The Daily Chronicle</span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="#" class="nav__link">World</a></li>
+          <li><a href="#" class="nav__link">Politics</a></li>
+          <li><a href="#" class="nav__link">Business</a></li>
+          <li><a href="#" class="nav__link">Tech</a></li>
+          <li><a href="#" class="nav__link">Sports</a></li>
+          <li><a href="#" class="nav__link">Culture</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="btn-subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <article class="hero__featured card">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=700&fit=crop" alt="Newsroom with journalists working" class="card__image">
+          <span class="card__badge">Politics</span>
+        </div>
+        <div class="card__body">
+          <time datetime="2026-08-17" class="card__date">August 17, 2026</time>
+          <h1 id="hero-heading" class="card__title card__title--hero">
+            Global Summit Reaches Historic Agreement on Carbon Emissions
+          </h1>
+          <p class="card__excerpt">
+            World leaders commit to binding targets in a deal hailed as the most ambitious climate framework since the Paris Accord.
+          </p>
+          <span class="card__author">By Sarah Mitchell</span>
+        </div>
+      </article>
+
+      <aside class="hero__sidebar">
+        <h2 class="section-label">Top Stories</h2>
+        <article class="card card--compact">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop" alt="Stock market charts" class="card__thumb">
+          <div class="card__body">
+            <span class="card__category">Business</span>
+            <h3 class="card__title">Markets Rally as Inflation Data Beats Expectations</h3>
+            <time datetime="2026-08-17" class="card__date">2 hrs ago</time>
+          </div>
+        </article>
+        <article class="card card--compact">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop" alt="Football stadium" class="card__thumb">
+          <div class="card__body">
+            <span class="card__category">Sports</span>
+            <h3 class="card__title">Underdogs Stun Champions in Season Opener</h3>
+            <time datetime="2026-08-17" class="card__date">4 hrs ago</time>
+          </div>
+        </article>
+        <article class="card card--compact">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="Circuit board technology" class="card__thumb">
+          <div class="card__body">
+            <span class="card__category">Tech</span>
+            <h3 class="card__title">AI Regulation Bill Clears First Hurdle in Senate</h3>
+            <time datetime="2026-08-17" class="card__date">5 hrs ago</time>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+    <!-- Category Strip -->
+    <nav class="categories" aria-label="News categories">
+      <a href="#" class="categories__item categories__item--active">All</a>
+      <a href="#" class="categories__item">World</a>
+      <a href="#" class="categories__item">Politics</a>
+      <a href="#" class="categories__item">Business</a>
+      <a href="#" class="categories__item">Tech</a>
+      <a href="#" class="categories__item">Sports</a>
+      <a href="#" class="categories__item">Health</a>
+      <a href="#" class="categories__item">Opinion</a>
+    </nav>
+
+    <!-- News Grid -->
+    <section class="news-grid" aria-labelledby="latest-heading">
+      <div class="news-grid__header">
+        <h2 id="latest-heading" class="section-title">Latest News</h2>
+        <a href="#" class="view-all">View all →</a>
+      </div>
+
+      <div class="news-grid__layout">
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop" alt="City skyline at dusk" class="card__image">
+            <span class="card__badge">World</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Urban Renewal Project Transforms Historic District</h3>
+            <p class="card__excerpt">A decade-long initiative brings green spaces and affordable housing to the city center.</p>
+            <time datetime="2026-08-17" class="card__date">6 hrs ago</time>
+          </div>
+        </article>
+
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" alt="Medical research laboratory" class="card__image">
+            <span class="card__badge">Health</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Breakthrough Vaccine Shows Promise in Clinical Trials</h3>
+            <p class="card__excerpt">Researchers report 94% efficacy in phase-three trials for a new respiratory treatment.</p>
+            <time datetime="2026-08-16" class="card__date">Yesterday</time>
+          </div>
+        </article>
+
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Modern office workspace" class="card__image">
+            <span class="card__badge">Business</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Remote Work Policies Reshape Corporate Real Estate</h3>
+            <p class="card__excerpt">Major firms reduce office footprints as hybrid models become permanent.</p>
+            <time datetime="2026-08-16" class="card__date">Yesterday</time>
+          </div>
+        </article>
+
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8121?w=600&h=400&fit=crop" alt="Athletes competing" class="card__image">
+            <span class="card__badge">Sports</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Olympic Qualifiers Draw Record Global Audience</h3>
+            <p class="card__excerpt">Streaming platforms report viewership surpassing traditional broadcast numbers.</p>
+            <time datetime="2026-08-15" class="card__date">2 days ago</time>
+          </div>
+        </article>
+
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" alt="Robot and human interaction" class="card__image">
+            <span class="card__badge">Tech</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Humanoid Robots Enter Mainstream Manufacturing</h3>
+            <p class="card__excerpt">Automakers deploy bipedal robots on assembly lines for the first time at scale.</p>
+            <time datetime="2026-08-15" class="card__date">2 days ago</time>
+          </div>
+        </article>
+
+        <article class="card card--grid">
+          <div class="card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop" alt="Concert crowd with lights" class="card__image">
+            <span class="card__badge">Culture</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">International Film Festival Opens to Standing Ovations</h3>
+            <p class="card__excerpt">Opening night premiere receives longest applause in the festival's 30-year history.</p>
+            <time datetime="2026-08-14" class="card__date">3 days ago</time>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Two-Column Feature Section -->
+    <section class="features" aria-labelledby="features-heading">
+      <div class="features__column">
+        <h2 id="features-heading" class="section-title">Opinion</h2>
+        <article class="card card--horizontal">
+          <div class="card__body">
+            <span class="card__category">Editorial</span>
+            <h3 class="card__title">Why Education Reform Cannot Wait Another Decade</h3>
+            <p class="card__excerpt">Our education system was designed for a world that no longer exists. The time for incremental change is over.</p>
+            <span class="card__author">The Editorial Board</span>
+          </div>
+        </article>
+        <article class="card card--horizontal">
+          <div class="card__body">
+            <span class="card__category">Guest Essay</span>
+            <h3 class="card__title">The Quiet Revolution in Renewable Energy Storage</h3>
+            <p class="card__excerpt">Battery technology advances are outpacing predictions — and reshaping the energy landscape faster than policy can follow.</p>
+            <span class="card__author">Dr. Elena Vasquez</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="features__column">
+        <h2 class="section-title">In Brief</h2>
+        <ul class="brief-list">
+          <li class="brief-list__item">
+            <time datetime="2026-08-17">17 Aug</time>
+            <p>Central bank holds interest rates steady amid mixed economic signals.</p>
+          </li>
+          <li class="brief-list__item">
+            <time datetime="2026-08-17">17 Aug</time>
+            <p>Archaeologists uncover Roman-era mosaic in Mediterranean excavation site.</p>
+          </li>
+          <li class="brief-list__item">
+            <time datetime="2026-08-16">16 Aug</time>
+            <p>Space agency confirms successful launch of next-generation satellite constellation.</p>
+          </li>
+          <li class="brief-list__item">
+            <time datetime="2026-08-16">16 Aug</time>
+            <p>National museum announces free admission program for students and seniors.</p>
+          </li>
+          <li class="brief-list__item">
+            <time datetime="2026-08-15">15 Aug</time>
+            <p>Wildlife conservation group reports rebound in endangered species population.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter__content">
+        <h2 id="newsletter-heading" class="newsletter__title">Stay Informed</h2>
+        <p class="newsletter__text">Get the day's top stories delivered to your inbox every morning.</p>
+      </div>
+      <form class="newsletter__form" action="#" method="post">
+        <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit" class="newsletter__btn">Sign Up</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="logo__mark">DC</span>
+        <p class="footer__tagline">Independent journalism since 1892.</p>
+      </div>
+      <div class="footer__links">
+        <h3>Sections</h3>
+        <ul>
+          <li><a href="#">World</a></li>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Tech</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookie Settings</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 The Daily Chronicle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
