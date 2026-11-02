@@ -58,11 +58,11 @@ const PRACTICALS = [
     type: "react",
     tech: ["React", "JS", "CSS"]
   },
-  {
-    title: "Grove — Employee Directory",
-    description: "A React employee directory app with state management, search, and dynamic employee listings.",
-    url: "https://papaya-pika-41ec72.netlify.app",
-    type: "react",
-    tech: ["React", "JS", "CSS"]
-  }
+  // {
+  //   title: "Grove — Employee Directory",
+  //   description: "A React employee directory app with state management, search, and dynamic employee listings.",
+  //   url: "https://papaya-pika-41ec72.netlify.app",
+  //   type: "react",
+  //   tech: ["React", "JS", "CSS"]
+  // }
 ];
