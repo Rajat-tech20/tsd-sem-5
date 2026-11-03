@@ -54,7 +54,7 @@ const PRACTICALS = [
   {
     title: "College Portal — Student Profiles",
     description: "A React-based student profile directory with search, filtering, and detailed profile cards.",
-    url: "https://app.netlify.com/projects/frabjous-twilight-80a85c/agent-runs/new",
+    url: "https://frabjous-twilight-80a85c.netlify.app",
     type: "react",
     tech: ["React", "JS", "CSS"]
   },
