@@ -19,7 +19,7 @@ const PRACTICALS = [
   {
     title: "Ilai Thali — Restaurant Landing Page",
     description: "A South Indian restaurant landing page with menu, about section, and reservation form.",
-    url: "practicals/landing/index.html",
+    url: "practicals/Practical 1/index.html",
     type: "web",
     tech: ["HTML", "CSS"]
   },
